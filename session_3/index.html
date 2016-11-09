@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaseCampJS Homework 3</title>
+    <script src="test.js"></script>
+</head>
+<body>
+
+<script>
+    /* *** 1 *** */
+    var testObj1 = {};
+    var testObj2 = new Object();
+
+    testObj1.age = 24;
+    testObj1.height = 148;
+    testObj2.age = 27
+    testObj2.height = 147;
+
+    console.log(compareObjects(testObj1, testObj2, "age"));
+    console.log(compareObjects(testObj1, testObj2, "height"));
+
+    /* *** 2 *** */
+    var mySongs = [
+        {
+            played: 25,
+            name: "Rammlied"
+        }, {
+            played: 17,
+            name: "Liebe ist fur alle da"
+        }, {
+            played: 63,
+            name: "Sonne"
+        }, {
+            played: 14,
+            name: "Rammstein"
+        }, {
+            played: 18,
+            name: "Siemann"
+        }
+    ];
+    console.log(favoriteSong(mySongs));
+
+    /* *** 3 *** */
+    var calc1 = new Calculator(),
+            calc2 = new Calculator();
+
+    [3, 8, 11].forEach(function(x) {
+        calc1.add(x);
+    });
+
+    [5, 12, 17].forEach(function(x) {
+        calc2.add(x);
+    });
+
+    console.log("Calculator1.sum: ", calc1.sum);
+    console.log("Calculator2.sum: ", calc2.sum);
+
+    console.log("Calculator1.sum + Calculator2.sum: ", calc1.sum + calc2.sum);
+    console.log("Calculator1.sum[2] + Calculator2.sum[2]: ", calc1.getCurrentSum(2) + calc2.getCurrentSum(2));
+
+    console.log("Calculator1.sum[3]: ", calc1.getCurrentSum(3));
+    console.log("Calculator1.sum: ", calc1.sum);
+
+    /* *** Deep Copy *** */
+
+    var object = {
+        "name1": ["Hello", true],
+        "name2": 75,
+        "name3": {
+            age: 15,
+            language: {
+                shortcut: "UA",
+                full: "Ukraine"
+            }
+        },
+        "name4": function(a) { return a * 3; }
+    };
+
+    var copy = deepCopy(object);
+
+    console.log(object, copy);
+</script>
+
+</body>
+</html>
