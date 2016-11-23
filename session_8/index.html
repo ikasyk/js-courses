@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars Heroes</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+<div id="container" class="star-wars-heroes"></div>
+
+<script>
+    var swh = new StarWarsHeroes(document.getElementById('container'));
+    swh.setLang({
+        "birth_year": "Birth year",
+        "episode": "Episode",
+        "eye_color": "Eye color",
+        "gender": "Gender",
+        "hair_color": "Hair Color",
+        "height": "Height",
+        "mass": "Mass",
+        "name": "Name",
+        "skin_color": "Skin Color",
+        "star_wars_heroes": "Star Wars Heroes"
+    });
+    swh.init();
+</script>
+</body>
+</html>

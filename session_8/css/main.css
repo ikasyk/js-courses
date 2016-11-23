@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open San', sans-serif;
+    font-size: 16px;
+    background: #aeaeae;
+}
+
+#container {
+    min-width: 600px;
+    margin: 50px;
+}
+
+.star-wars-heroes .wrap {
+    background: #FFF;
+    border: 1px solid #999;
+    padding: 25px;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.star-wars-heroes h1.header {
+    font-size: 250%;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.star-wars-heroes .contents {
+    width: 4000px;
+}
+
+.star-wars-heroes .contents.animated {
+    transition: margin-left 500ms ease-in-out;
+}
+
+.star-wars-heroes .contents .content {
+    float: left;
+    transition: opacity 400ms ease-in-out;
+}
+
+.star-wars-heroes .content:after, .star-wars-heroes .content:before,
+.star-wars-heroes .nav:after, .star-wars-heroes .nav:before {
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+.star-wars-heroes .content .column {
+    float: left;
+    width: 33.33%;
+    min-height: 1px;
+    padding: 20px 35px;
+}
+
+
+.star-wars-heroes .content .hero-passport, .star-wars-heroes .content .hero-episodes {
+    line-height: 20px;
+}
+
+.star-wars-heroes .content .column.hero-passport div, .star-wars-heroes .content .column.hero-episodes div {
+    padding-bottom: 8px;
+}
+
+.star-wars-heroes .avatar-wrap {
+    position: relative;
+    width: 100%;
+    border: 1px solid #aaa;
+}
+
+.star-wars-heroes .avatar-wrap:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.star-wars-heroes .avatar-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+}
+
+.star-wars-heroes .heroes-nav {
+    margin: 20px auto 0;
+}
+
+.star-wars-heroes .nav {
+    list-style: none;
+}
+
+.star-wars-heroes .nav li {
+    float: left;
+    width: 50%;
+    text-align: center;
+    line-height: 29px;
+    border: 1px solid #777;
+    color: #333;
+}
+
+.star-wars-heroes .nav li:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+}
+
+.star-wars-heroes .nav li:last-child {
+    border-left-width: 0;
+    border-radius: 0 15px 15px 0;
+}
+
+.star-wars-heroes .nav li:first-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.star-wars-heroes .nav.disable-prev li:first-child {
+    border-color: #acacac;
+    border-right-color: #777;
+    color: #7a7a7a;
+    cursor: default;
+}
+
+.star-wars-heroes .nav.disable-next li:last-child {
+    border-color: #acacac;
+    color: #7a7a7a;
+    cursor: default;
+}
+
+.star-wars-heroes .nav.loading-prev li:first-child {
+    border-color: #2a64cf;
+    border-right-color: #2a64cf;
+    color: #2a64cf;
+}
+
+.star-wars-heroes .nav.loading-next li:first-child {
+    border-right-color: #2a64cf;
+}
+
+.star-wars-heroes .nav.loading-next li:last-child {
+    border-color: #2a64cf;
+    color: #2a64cf;
+}
+
+.swh-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    background: #196cff;
+    height: 4px;
+    transition: width ease-out 300ms, opacity ease-out 700ms 10ms;
+}
